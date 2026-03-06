@@ -50,12 +50,12 @@ const Index = () => {
         <div className="container">
           <div className="flex items-center gap-3 mb-3">
             <Eye className="h-8 w-8 text-accent" />
-            <h1 className="text-3xl md:text-4xl font-display font-bold">FedhaWatch 2027</h1>
+            <h1 className="text-3xl md:text-4xl font-display font-bold">FedhaWatch</h1>
           </div>
           <p className="text-lg text-hero-foreground/80 font-body mb-2">Revealing the Shadow Budget</p>
-          <p className="text-sm text-hero-foreground/60">
+          {/* <p className="text-sm text-hero-foreground/60">
             Last updated: {updatedAt} · Period: {data.period_start} to {data.period_end}
-          </p>
+          </p> */}
         </div>
       </section>
 
