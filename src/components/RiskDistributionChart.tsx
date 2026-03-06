@@ -17,7 +17,7 @@ export function RiskDistributionChart({ entities }: RiskDistributionChartProps) 
 
   return (
     <div className="bg-card border rounded-lg p-6 w-full min-w-0">
-      <h3 className="font-display text-lg font-bold mb-4 text-card-foreground">
+      <h3 className="font-display text-lg font-bold mb-4 text-card-foreground ">
         Risk Distribution
       </h3>
 
@@ -28,8 +28,8 @@ export function RiskDistributionChart({ entities }: RiskDistributionChartProps) 
               data={counts}
               cx="50%"
               cy="50%"
-              innerRadius={55}
-              outerRadius={90}
+              innerRadius={70}
+              outerRadius={110}
               paddingAngle={2}
               dataKey="value"
             >
@@ -44,6 +44,10 @@ export function RiskDistributionChart({ entities }: RiskDistributionChartProps) 
             />
 
             <Legend
+              layout="vertical"
+              verticalAlign="middle"
+              align="right"
+              wrapperStyle={{ right: "15%" }}
               formatter={(value) => (
                 <span className="text-xs text-muted-foreground">{value}</span>
               )}

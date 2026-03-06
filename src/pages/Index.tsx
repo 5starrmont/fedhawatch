@@ -62,10 +62,9 @@ const Index = () => {
       <div className="container py-8 space-y-8">
         <SummaryCards entities={data.entities} />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <RiskDistributionChart entities={data.entities} />
-          <TopFlaggedEntities entities={data.entities} />
-        </div>
+        <TopFlaggedEntities entities={data.entities} />
+
+        <RiskDistributionChart entities={data.entities} />
 
         <ShadowSpendChart entities={data.entities} />
 
