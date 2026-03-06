@@ -14,21 +14,29 @@ export interface Entity {
   entity_id: string;
   entity_type: EntityType;
   display_name: string;
+
   party_entity_id: string | null;
+
   county: string | null;
   constituency: string | null;
   ward: string | null;
+
   reported_spend_kes: number | null;
-  reported_metric: string | null;
   shadow_spend_kes: number;
+
   gap_percent: number | null;
+
   risk_level: RiskLevel;
   label: string;
   drivers: string[];
-  reconciliation_status: string | null;
-  chosen_source_org: string | null;
-  sources: Source[];
+
   reporting_status: ReportingStatus;
+
+  // optional fields
+  reported_metric?: string | null;
+  reconciliation_status?: string | null;
+  chosen_source_org?: string | null;
+  sources?: Source[];
 }
 
 export interface FedhaWatchContract {

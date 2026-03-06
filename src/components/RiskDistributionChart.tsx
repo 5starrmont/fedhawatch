@@ -16,9 +16,12 @@ export function RiskDistributionChart({ entities }: RiskDistributionChartProps) 
   })).filter((d) => d.value > 0);
 
   return (
-    <div className="bg-card border rounded-lg p-6">
-      <h3 className="font-display text-lg font-bold mb-4 text-card-foreground">Risk Distribution</h3>
-      <div className="h-[280px]">
+    <div className="bg-card border rounded-lg p-6 w-full min-w-0">
+      <h3 className="font-display text-lg font-bold mb-4 text-card-foreground">
+        Risk Distribution
+      </h3>
+
+      <div className="h-[280px] w-full min-w-0">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Pie
@@ -34,12 +37,16 @@ export function RiskDistributionChart({ entities }: RiskDistributionChartProps) 
                 <Cell key={entry.level} fill={entry.color} stroke="none" />
               ))}
             </Pie>
+
             <Tooltip
               formatter={(value: number, name: string) => [`${value} entities`, name]}
               contentStyle={{ fontSize: 13, borderRadius: 8 }}
             />
+
             <Legend
-              formatter={(value) => <span className="text-xs text-muted-foreground">{value}</span>}
+              formatter={(value) => (
+                <span className="text-xs text-muted-foreground">{value}</span>
+              )}
               iconSize={10}
             />
           </PieChart>
